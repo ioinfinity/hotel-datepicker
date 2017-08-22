@@ -11,7 +11,7 @@ var HotelDatepicker = function HotelDatepicker(input, options) {
 
 	this.format = opts.format || 'YYYY-MM-DD';
 	this.infoFormat = opts.infoFormat || this.format;
-	this.separator = opts.separator || ' >> ';
+	this.separator = opts.separator || ' ↔ ';
 	this.startOfWeek = opts.startOfWeek || 'sunday'; // Or monday
 	this.startDate = opts.startDate || new Date();
 	this.endDate = opts.endDate || false;

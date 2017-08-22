@@ -56,7 +56,7 @@ var datepicker = new HotelDatepicker(input, {
 			var tomorrow = new Date();
 			tomorrow.setDate(tomorrow.getDate() + 1);
 			var input7 = document.getElementById('demo7');
-			input7.value = fecha.format(today, 'YYYY-MM-DD') + ' >> ' + fecha.format(tomorrow, 'YYYY-MM-DD');
+			input7.value = fecha.format(today, 'YYYY-MM-DD') + ' ↔ ' + fecha.format(tomorrow, 'YYYY-MM-DD');
 			var demo7 = new HotelDatepicker(input7, {
 				minNights: 1,
 				maxNights: 7
