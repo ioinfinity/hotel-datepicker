@@ -25,10 +25,10 @@ var HotelDatepicker = function HotelDatepicker(input, options) {
 	this.hoveringTooltip = opts.hoveringTooltip || true; // Or a function
 	this.autoClose = opts.autoClose === undefined ? true : opts.autoClose;
 	this.i18n = opts.i18n || {
-		selected: 'Your stay:',
-		night: 'Night',
-		nights: 'Nights',
-		button: 'Close',
+		selected: gettext('Your stay:'),
+		night: gettext('Night'),
+		nights: gettext('Nights'),
+		button: gettext('Close'),
 		'day-names': [gettext('Sun'), gettext('Mon'), gettext('Tue'), gettext('Wed'), gettext('Thur'), gettext('Fri'), gettext('Sat')],
 		'month-names': [gettext('January'), gettext('February'), gettext('March'), gettext('April'), gettext('May'), gettext('June'), gettext('July'), gettext('August'), gettext('September'), gettext('October'), gettext('November'), gettext('December')],
 		'error-more': 'Date range should not be more than 1 night',
