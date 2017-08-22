@@ -692,8 +692,8 @@ HotelDatepicker.prototype.showSelectedInfo = function showSelectedInfo () {
 		var countText = count === 1 ? count + ' ' + this.lang('night') : count + ' ' + this.lang('nights');
 		var dateRangeValue = this.getDateString(new Date(this.start)) + this.separator + this.getDateString(new Date(this.end));
 		
-		document.getElementById("hotel_datepicker_startdate").value = this.getDateString(new Date(this.start));
-		document.getElementById("hotel_datepicker_enddate").value = this.getDateString(new Date(this.end));
+		document.getElementById("id_ubd_start_date").value = this.getDateString(new Date(this.start));
+		document.getElementById("id_ubd_end_date").value = this.getDateString(new Date(this.end));
 		
             // Show count
 		elSelected.style.display = '';
