@@ -457,7 +457,7 @@ HotelDatepicker.prototype.openDatepicker = function openDatepicker () {
         // Open the datepicker
 	if (!this.isOpen) {
             // Add/remove helper classes
-        this.removeAttr( 'style' );
+        this.removeAttr(this.datepicker, 'style');
 		this.removeClass(this.datepicker, 'datepicker--closed');
 		this.addClass(this.datepicker, 'datepicker--open');
 
