@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IOBnB Hotel Datepicker - A pure Javascript date range picker for hotels</title>
+
+	<link rel="stylesheet" type="text/css" href="../dist/css/hotel-datepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+<div class="page">
+	<h1>IOBnB Hotel Datepicker</h1>
+	<p>A pure Javascript date range picker for hotels.</p>
+
+
+	<div class="demo">
+		<h3>Demo</h3>
+
+		
+		<div class="demo__item">
+			<div class="demo__input">
+				<input type="text" id="demo7" value="">
+				<input type="hidden" name="hotel_datepicker_startdate" id="hotel_datepicker_startdate" >
+				<input type="hidden" name="hotel_datepicker_enddate" id="hotel_datepicker_enddate">
+			</div>
+			<p class="demo__description">Range between <code>1</code> and <code>7</code> nights</p>
+			<div class="demo__config">
+				<pre>
+var input = document.getElementById('input-id');
+var datepicker = new HotelDatepicker(input, {
+    minNights: 1,
+    maxNights: 7
+});
+				</pre>
+			</div>
+		</div>
+
+
+	<footer class="site__footer">
+		Developed by <a href="http://lopezb.com/">Benito Lopez</a>
+	</footer>
+
+</div>
+
+	<script type="text/javascript" src="https://rawgit.com/taylorhakes/fecha/master/fecha.min.js"></script>
+	<script type="text/javascript" src="../dist/js/hotel-datepicker.js"></script>
+
+	<script type="text/javascript">
+		(function() {
+			
+
+			// ------------------- DEMO 7 ------------------- //
+			var today = new Date();
+			var tomorrow = new Date();
+			tomorrow.setDate(tomorrow.getDate() + 1);
+			var input7 = document.getElementById('demo7');
+			input7.value = fecha.format(today, 'YYYY-MM-DD') + ' >> ' + fecha.format(tomorrow, 'YYYY-MM-DD');
+			var demo7 = new HotelDatepicker(input7, {
+				minNights: 1,
+				maxNights: 7
+			});
+			
+		})();
+	</script>
+</body>
+</html>

@@ -11,7 +11,7 @@ var HotelDatepicker = function HotelDatepicker(input, options) {
 
 	this.format = opts.format || 'YYYY-MM-DD';
 	this.infoFormat = opts.infoFormat || this.format;
-	this.separator = opts.separator || ' - ';
+	this.separator = opts.separator || ' >> ';
 	this.startOfWeek = opts.startOfWeek || 'sunday'; // Or monday
 	this.startDate = opts.startDate || new Date();
 	this.endDate = opts.endDate || false;
@@ -691,7 +691,10 @@ HotelDatepicker.prototype.showSelectedInfo = function showSelectedInfo () {
 		var count = this.countDays(this.end, this.start) - 1;
 		var countText = count === 1 ? count + ' ' + this.lang('night') : count + ' ' + this.lang('nights');
 		var dateRangeValue = this.getDateString(new Date(this.start)) + this.separator + this.getDateString(new Date(this.end));
-
+		
+		document.getElementById("hotel_datepicker_startdate").value = this.getDateString(new Date(this.start));
+		document.getElementById("hotel_datepicker_enddate").value = this.getDateString(new Date(this.end));
+		
             // Show count
 		elSelected.style.display = '';
 		elSelected.firstElementChild.textContent = countText;
