@@ -455,7 +455,7 @@ HotelDatepicker.prototype.createMonthDomString = function createMonthDomString (
 
 HotelDatepicker.prototype.openDatepicker = function openDatepicker () {
         // Open the datepicker
-	//if (!this.isOpen) {
+	if (!this.isOpen) {
             // Add/remove helper classes
 		this.removeClass(this.datepicker, 'datepicker--closed');
 		this.addClass(this.datepicker, 'datepicker--open');
@@ -474,7 +474,7 @@ HotelDatepicker.prototype.openDatepicker = function openDatepicker () {
 
             // Disable (if needed) the prev/next buttons
 		this.disableNextPrevButtons();
-	//}
+	}
 };
 
 HotelDatepicker.prototype.closeDatepicker = function closeDatepicker () {
