@@ -20,7 +20,7 @@
 		
 		<div class="demo__item">
 			<div class="demo__input">
-				<input type="text" id="demo7" value="">
+				<input type="text" id="demo7" value=""  style="width:270px;">
 				<input type="hidden" name="ubd_start_date" id="id_ubd_start_date" >
 				<input type="hidden" name="ubd_end_date" id="id_ubd_end_date">
 			</div>
@@ -44,9 +44,9 @@ var datepicker = new HotelDatepicker(input, {
 </div>
 
 	<script type="text/javascript" src="https://rawgit.com/taylorhakes/fecha/master/fecha.min.js"></script>
-	<!-- <script type="text/javascript" src="../dist/js/hotel-datepicker.js"></script> -->
+	
 	<script type="text/javascript" src="https://cdn.rawgit.com/ioinfinity/hotel-datepicker/d4c62ea0/dist/js/hotel-datepicker.js"></script>
-
+	<!--  <script type="text/javascript" src="../dist/js/hotel-datepicker.js"></script>  -->
 	<script type="text/javascript">
 		(function() {
 			
@@ -56,7 +56,7 @@ var datepicker = new HotelDatepicker(input, {
 			var tomorrow = new Date();
 			tomorrow.setDate(tomorrow.getDate() + 1);
 			var input7 = document.getElementById('demo7');
-			input7.value = fecha.format(today, 'YYYY-MM-DD') + ' ↔ ' + fecha.format(tomorrow, 'YYYY-MM-DD');
+			input7.value = fecha.format(today, 'YYYY-MM-DD') + ' ↔ ' + fecha.format(tomorrow, 'YYYY-MM-DD') + ' (1 night)';
 			var demo7 = new HotelDatepicker(input7, {
 				minNights: 1,
 				maxNights: 7
